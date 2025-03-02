@@ -17,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
@@ -24,6 +25,9 @@ public class HomescreenController implements Initializable {
 
     @FXML
     private Button buybutton;
+
+    @FXML
+    private GridPane gridproduct;
 
     @FXML
     private ImageView logoutImage;
@@ -36,9 +40,6 @@ public class HomescreenController implements Initializable {
 
     @FXML
     private Label usernamelabel;
-
-
-    
     
    
     

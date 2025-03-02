@@ -1,5 +1,6 @@
 package Homescreen;
 
+import java.awt.Image;
 import java.sql.Date;
 
 public class Product {
@@ -11,11 +12,29 @@ public class Product {
 	private String category;
 	private String tell;
 	private String fbid;
+	private Image image;
 	
+	public Product() {}
 	
-	public Product() {
+	public Product(String nameString, String username, double price, Date date, String description, String category, String tell, String fbid) {
+        this.nameString = nameString;
+        this.username = username;
+        this.price = price;
+        this.date = date;
+        this.description = description;
+        this.category = category;
+        this.tell = tell;
+        this.fbid = fbid;
+        this.image = image;
+    }
+
+	public Image getImage() {
+		return image;
 	}
 
+	public void setImage(Image image) {
+		this.image = image;
+	}
 
 	public String getNameString() {
 		return nameString;
