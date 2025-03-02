@@ -2,29 +2,46 @@ package Homescreen;
 
 
 
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 public class HomescreenController implements Initializable {
+
+    @FXML
+    private Button buybutton;
+
     @FXML
     private ImageView logoutImage;
 
     @FXML
-    private Label logoutLabel;
-    
+    private Button logoutbutton;
+
+    @FXML
+    private Label selllabel;
+
     @FXML
     private Label usernamelabel;
+
+
+    
+    
+   
+    
     
     
     private String username= "Username";
@@ -38,7 +55,7 @@ public class HomescreenController implements Initializable {
 
 	
 	
-	public void logouticongetClicked(MouseEvent e) {
+	public void logouticongetClicked(ActionEvent e) {
 		System.out.println("HEllo world");
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/LoginScene.fxml"));
@@ -51,7 +68,7 @@ public class HomescreenController implements Initializable {
 			stage.show();
 
 		} catch (Exception e2) {
-			// TODO: handle exception
+			e2.printStackTrace();
 		}
 
 	}
@@ -75,6 +92,16 @@ public class HomescreenController implements Initializable {
 		this.username=username;
 		usernamelabel.setText(this.username);
 		
+	}
+	
+	
+	public void sellbuttonclicked(MouseEvent e2) {
+		System.out.println("sell");
+		
+	}
+	
+	public void buybuttonclicked(ActionEvent e) {
+		System.out.println("Buy");
 	}
 	
     
