@@ -12,4 +12,5 @@ module ProjectOOp {
 	opens SinginScene to javafx.graphics, javafx.fxml;
 	opens ClassHelper to javafx.graphics,javafx.fxml;
 	opens Homescreen to javafx.graphics,javafx.fxml;
+	opens SellScreen to javafx.graphics,javafx.fxml;
 }

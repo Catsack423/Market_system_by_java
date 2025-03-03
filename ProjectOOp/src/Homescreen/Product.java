@@ -16,7 +16,7 @@ public class Product {
 	
 	public Product() {}
 	
-	public Product(String nameString, String username, double price, Date date, String description, String category, String tell, String fbid) {
+	public Product(String nameString, String username, double price, Date date, String description, String category, String tell, String fbid,Image image) {
         this.nameString = nameString;
         this.username = username;
         this.price = price;
