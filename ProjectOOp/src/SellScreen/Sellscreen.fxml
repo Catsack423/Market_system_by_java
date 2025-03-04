@@ -7,6 +7,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -218,7 +219,7 @@
                                           <Font size="19.0" />
                                        </font>
                                     </Text>
-                                    <TextField maxHeight="32.0" maxWidth="400.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="461.0" promptText="type here" styleClass="transparent">
+                                    <TextField fx:id="productnameTextFeild" maxHeight="32.0" maxWidth="400.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="461.0" promptText="type here" styleClass="transparent">
                                        <VBox.margin>
                                           <Insets top="10.0" />
                                        </VBox.margin>
@@ -233,7 +234,7 @@
                                     </Text>
                                     <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="445.0">
                                        <children>
-                                          <TextField maxWidth="182.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="150.0" promptText="type here" text="0" />
+                                          <TextField fx:id="priceTextfeild" maxWidth="182.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="150.0" promptText="type here" text="0" />
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="บาท">
                                              <font>
                                                 <Font size="18.0" />
@@ -258,7 +259,7 @@
                                                 </Text>
                                                 <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                                                    <children>
-                                                      <TextField maxWidth="182.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="150.0" promptText="type here" text="1">
+                                                      <TextField fx:id="amoutTextfeild" maxWidth="182.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="150.0" promptText="type here" text="1">
                                                          <HBox.margin>
                                                             <Insets top="10.0" />
                                                          </HBox.margin>
@@ -290,7 +291,7 @@
                                                 </Text>
                                                 <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                                                    <children>
-                                                      <MenuButton mnemonicParsing="false" prefHeight="30.0" prefWidth="170.0" text="MenuButton">
+                                                      <MenuButton fx:id="menucategorybutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="170.0" text="MenuButton">
                                                          <items>
                                                             <MenuItem mnemonicParsing="false" text="Action 1" />
                                                             <MenuItem mnemonicParsing="false" text="Action 2" />
@@ -376,7 +377,7 @@
                               </VBox>
                               <VBox alignment="CENTER" prefHeight="204.0" prefWidth="305.0" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="showpicproduct" fitHeight="150.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
 
                                        <image>
                                           <Image url="@arrowdown.png" />
@@ -385,9 +386,9 @@
                                           <Cursor fx:constant="DEFAULT" />
                                        </cursor>
                                     </ImageView>
-                                    <Button mnemonicParsing="false" text="เลือกรูปภาพ">
+                                    <Button fx:id="selectpicturebutton" mnemonicParsing="false" text="เลือกรูปภาพ">
                                        <VBox.margin>
-                                          <Insets top="10.0" />
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                                        </VBox.margin>
                                        <font>
                                           <Font size="18.0" />
@@ -403,6 +404,41 @@
                               <Insets />
                            </opaqueInsets>
                         </HBox>
+                        <VBox prefHeight="272.0" prefWidth="943.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="คำอธิบายสินค้า">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="descripTextarea" prefHeight="193.0" prefWidth="923.0" promptText="กรุณากรอกคำอธิบายของสินค้าลูกต้า">
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" right="20.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextArea>
+                              <HBox alignment="CENTER" prefHeight="64.0" prefWidth="943.0">
+                                 <children>
+                                    <Button fx:id="submitbuttion" mnemonicParsing="false" prefHeight="39.0" prefWidth="69.0" text="ขาย">
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </VBox>
                      </children>
                      <VBox.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" />
