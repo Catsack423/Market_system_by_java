@@ -128,6 +128,7 @@ public class HomescreenController implements Initializable {
 	        });
 			
 			
+			
 			stage.show();
             
 		} catch (Exception e2) {
