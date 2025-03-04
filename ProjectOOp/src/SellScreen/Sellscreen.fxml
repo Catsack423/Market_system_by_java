@@ -20,6 +20,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="828.0" prefWidth="1280.0" stylesheets="@SellscreenStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SellScreen.SellscreenController">
 
 
+
    <children>
       <BorderPane layoutX="-20.0" prefHeight="828.0" prefWidth="297.0" style="-fx-background-color: E7E7E7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
@@ -170,7 +171,6 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="71.0" prefWidth="1003.0">
                      <children>
-
                         <Label fx:id="selllabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="5.0" onMouseClicked="#buybuttonclicked" prefHeight="40.0" prefWidth="113.0" text="ซื้อ">
                            <graphic>
                               <Button fx:id="buybutton" alignment="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#sellbuttonclicked" prefHeight="40.0" prefWidth="66.0" style="-fx-background-insets: 2;" text="ขาย" textFill="WHITE">
@@ -280,7 +280,6 @@
                                     <Insets left="20.0" />
                                  </HBox.margin>
                               </VBox>
-
                               <VBox alignment="CENTER" prefHeight="204.0" prefWidth="305.0" HBox.hgrow="ALWAYS">
                                  <children>
                                     <ImageView fitHeight="150.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">

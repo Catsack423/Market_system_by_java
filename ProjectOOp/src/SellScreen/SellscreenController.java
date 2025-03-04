@@ -70,6 +70,10 @@ public class SellscreenController {
 			}
 	    }
 
+  
+
+
+
 	    @FXML
 	    void sellbuttonclicked(ActionEvent e) {
 	    	System.out.println("sell");
@@ -80,5 +84,4 @@ public class SellscreenController {
 	    	usernamelabel.setText(this.username);
 		
 	    }
-
 }
