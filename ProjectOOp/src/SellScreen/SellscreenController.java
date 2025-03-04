@@ -11,26 +11,54 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class SellscreenController {
 	
-	  	@FXML
-	    private Button buybutton;
+	@FXML
+    private TextField amoutTextfeild;
 
-	    @FXML
-	    private ImageView logoutImage;
+    @FXML
+    private Button buybutton;
 
-	    @FXML
-	    private Button logoutbutton;
+    @FXML
+    private TextArea descripTextarea;
 
-	    @FXML
-	    private Label selllabel;
+    @FXML
+    private ImageView logoutImage;
 
-	    @FXML
-	    private Label usernamelabel;
+    @FXML
+    private Button logoutbutton;
+
+    @FXML
+    private MenuButton menucategorybutton;
+
+    @FXML
+    private TextField priceTextfeild;
+
+    @FXML
+    private TextField productnameTextFeild;
+
+    @FXML
+    private Button selectpicturebutton;
+
+    @FXML
+    private Label selllabel;
+
+    @FXML
+    private ImageView showpicproduct;
+
+    @FXML
+    private Button submitbuttion;
+
+    @FXML
+    private Label usernamelabel;
+
 	    
 	    private String username;
 	    private Stage stage;
