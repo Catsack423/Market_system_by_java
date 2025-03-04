@@ -37,3 +37,9 @@
 	-fx-border-radius:30px;
 	-fx-cursor: HAND;
 }
+
+
+
+.borderpane{
+	-fx-background-color:#E7E7E7;
+}
