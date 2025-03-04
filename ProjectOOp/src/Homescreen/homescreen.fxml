@@ -36,7 +36,7 @@
                               <Image url="@Male%20User.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="usernamelabel" alignment="TOP_LEFT" prefHeight="29.0" prefWidth="130.0" text="Username" textFill="WHITE">
+                        <Label fx:id="usernamelabel" alignment="TOP_LEFT" prefHeight="29.0" prefWidth="130.0" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>

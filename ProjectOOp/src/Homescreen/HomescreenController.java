@@ -6,6 +6,7 @@ package Homescreen;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import SellScreen.SellscreenController;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -136,8 +137,6 @@ public class HomescreenController implements Initializable {
 		}
 	}
 	
-	
-	public void setStage(Stage stage) {
         this.stage = stage;
     }
 
