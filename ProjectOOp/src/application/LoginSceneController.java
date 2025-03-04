@@ -64,7 +64,7 @@ public class LoginSceneController implements Initializable{
     
     
     public static Connection connectionDB() {
-    ;
+    
         try {
             // แสดง message เพื่อตรวจสอบว่าเข้าถึงเมธอดนี้หรือไม่
             System.out.println("กำลังเชื่อมต่อกับฐานข้อมูล...");

@@ -1,5 +1,6 @@
 package SellScreen;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -79,4 +80,5 @@ public class SellscreenController {
 	    	usernamelabel.setText(this.username);
 		
 	    }
+
 }

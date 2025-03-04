@@ -1,0 +1,62 @@
+.shadow{
+	-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1),10.0,0.0,0.0,10.0)
+	
+}
+
+.leftsidebar{
+	
+	-fx-background-color: radial-gradient(center 50% 20%, radius 100%, #A73B24, #830808);
+	-fx-border-radius: 20px;
+	-fx-background-radius: 0 20px 20px 0; /* มุมซ้าย 0, มุมขวา 30px */
+
+}
+
+.transparent{
+	-fx-background-color:rgba(0,0,0,0);
+}
+
+
+.logouthbox{
+	-fx-background-color:#D9D9D9 ;
+	-fx-background-radius : 20px;
+	-fx-background-size: 10px;
+	-fx-cursor: HAND;
+}
+
+.buyButton{
+	-fx-background-color:#A73B24 ;
+	-fx-background-radius : 20px;
+	
+	
+}
+
+
+.sellButton{
+	-fx-background-color:#D9D9D9 ;
+	-fx-background-radius : 50px;
+	-fx-border-radius:30px;
+	-fx-cursor: HAND;
+}
+
+
+.Vboxselldetail{
+	-fx-background-color:#FFFFFF;
+	-fx-background-radius : 50px;
+	-fx-border-radius:30px;
+		
+	
+}
+
+.text-field {
+    -fx-background-color: rgba(0,0,0,0);  /* สีพื้นหลัง */
+    -fx-border-color: #cccc;  /* สีขอบ */
+    -fx-border-radius: 5px;  /* ทำให้ขอบโค้งมน */
+	
+   
+}
+
+/* เมื่อ TextField ถูกเลือก (โฟกัส) */
+.text-field:focused {
+    -fx-border-color: #4A90E2;  /* เปลี่ยนสีขอบเมื่อคลิก */
+    -fx-background-color: #f4f4f4;
+}
