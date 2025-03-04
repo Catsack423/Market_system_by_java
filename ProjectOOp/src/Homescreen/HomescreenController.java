@@ -96,13 +96,25 @@ public class HomescreenController implements Initializable {
 	}
 	
 	
-	public void sellbuttonclicked(MouseEvent e2) {
-		System.out.println("sell");
+	public void buybuttonclicked(ActionEvent e) {
+		System.out.println("buy");
 		
 	}
 	
-	public void buybuttonclicked(ActionEvent e) {
-		System.out.println("Buy");
+	public void sellbuttonclicked(MouseEvent e) {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/SellScreen/Sellscreen.fxml"));
+			root = loader.load();
+			stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+			scene = new Scene(root);
+			stage.setScene(scene);
+			stage.setResizable(true);
+			stage.centerOnScreen();
+			stage.show();
+			
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
 	}
 	
     
