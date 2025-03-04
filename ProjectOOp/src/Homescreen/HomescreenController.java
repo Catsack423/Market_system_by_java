@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -20,6 +21,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class HomescreenController implements Initializable {
@@ -68,7 +70,6 @@ public class HomescreenController implements Initializable {
 			stage.setResizable(false);
 			stage.centerOnScreen();
 			stage.show();
-
 		} catch (Exception e2) {
 			e2.printStackTrace();
 		}
@@ -104,14 +105,28 @@ public class HomescreenController implements Initializable {
 	
 	public void sellbuttonclicked(MouseEvent e) {
 		try {
-            
+			final Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+            final boolean wasMaximized = stage.isMaximized();
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/SellScreen/Sellscreen.fxml"));
 			root = loader.load();
-			stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);
-			stage.setResizable(false);
-			stage.centerOnScreen();
+			stage.setResizable(true);
+			stage.show();
+			Platform.runLater(() -> {
+	            if(wasMaximized) {
+	            	Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
+	                stage.setX(bounds.getMinX());
+	                stage.setY(bounds.getMinY());
+	                stage.setWidth(bounds.getWidth());
+	                stage.setHeight(bounds.getHeight());
+	                // ลองเรียก maximize อีกครั้ง
+	                stage.setMaximized(true);
+	            } else {
+	                stage.centerOnScreen();
+	            }
+	        });
+			
 			
 			stage.show();
             
