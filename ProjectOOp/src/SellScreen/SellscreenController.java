@@ -74,9 +74,13 @@ public class SellscreenController {
 	            final boolean wasMaximized = stage.isMaximized();
 	    		FXMLLoader loader = new FXMLLoader(getClass().getResource("/Homescreen/homescreen.fxml"));
 				root = loader.load();
+				HomescreenController homescreenController = loader.getController();
+				homescreenController.showandsetUsername(getUsername());			
+				
 				scene = new Scene(root);
 				stage.setScene(scene);
 				stage.setResizable(true);
+				
 				stage.show();
 				 Platform.runLater(() -> {
 			            if(wasMaximized) {
@@ -96,7 +100,15 @@ public class SellscreenController {
 			}
 	    }	
 
-	    @FXML
+	    public String getUsername() {
+			return username;
+		}
+
+		public void setUsername(String username) {
+			this.username = username;
+		}
+
+		@FXML
 	    void logouticongetClicked(ActionEvent e) {
 	    	System.out.println("HEllo world");
 			try {
@@ -117,10 +129,6 @@ public class SellscreenController {
 			}
 	    }
 
-  
-
-
-
 	    @FXML
 	    void sellbuttonclicked(ActionEvent e) {
 	    	System.out.println("sell");
@@ -132,3 +140,7 @@ public class SellscreenController {
 		
 	    }
 }
+
+
+
+
