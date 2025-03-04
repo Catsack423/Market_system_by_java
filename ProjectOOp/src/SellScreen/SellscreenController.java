@@ -1,6 +1,8 @@
 package SellScreen;
 
 
+import Homescreen.HomescreenController;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -38,15 +40,17 @@ public class SellscreenController {
 	    @FXML
 	    void buybuttonclicked(MouseEvent e) {
 	    	try {
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("/Homescreen/homescreen.fxml"));
+
+	    		FXMLLoader loader = new FXMLLoader(getClass().getResource("/Homescreen/homescreen.fxml"));
 				root = loader.load();
 				stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 				scene = new Scene(root);
 				stage.setScene(scene);
-				stage.setResizable(true);
+				stage.setResizable(false);
 				stage.centerOnScreen();
+				stage.setMaximized(true);
 				stage.show();
-				
+
 			} catch (Exception e2) {
 				e2.printStackTrace();
 			}
@@ -64,6 +68,9 @@ public class SellscreenController {
 				stage.setResizable(false);
 				stage.centerOnScreen();
 				stage.show();
+				
+				
+				
 
 			} catch (Exception e2) {
 				e2.printStackTrace();

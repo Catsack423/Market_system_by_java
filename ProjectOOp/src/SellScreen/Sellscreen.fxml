@@ -5,6 +5,8 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -15,7 +17,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="828.0" prefWidth="1280.0" stylesheets="@SellscreenStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SellScreen.SellscreenController">
 
@@ -203,21 +204,21 @@
                   <VBox prefHeight="603.0" prefWidth="1003.0" VBox.vgrow="ALWAYS">
                      <children>
 
-                        <HBox alignment="CENTER_LEFT" prefHeight="314.0" prefWidth="962.0">
+                        <HBox alignment="CENTER_LEFT" prefHeight="326.0" prefWidth="963.0">
 
                            <padding>
                               <Insets left="20.0" right="30.0" top="30.0" />
                            </padding>
                            <children>
 
-                              <VBox prefHeight="214.0" prefWidth="464.0" HBox.hgrow="ALWAYS">
+                              <VBox prefHeight="397.0" prefWidth="558.0" HBox.hgrow="ALWAYS">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ชื่อสินค้า">
                                        <font>
                                           <Font size="19.0" />
                                        </font>
                                     </Text>
-                                    <TextField maxHeight="32.0" maxWidth="400.0" minWidth="32.0" prefHeight="32.0" prefWidth="461.0" promptText="type here" styleClass="transparent">
+                                    <TextField maxHeight="32.0" maxWidth="400.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="461.0" promptText="type here" styleClass="transparent">
                                        <VBox.margin>
                                           <Insets top="10.0" />
                                        </VBox.margin>
@@ -246,32 +247,125 @@
                                           <Insets top="10.0" />
                                        </VBox.margin>
                                     </HBox>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="จำนวน">
-                                       <font>
-                                          <Font size="19.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets top="20.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="445.0">
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <TextField maxWidth="182.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="150.0" promptText="type here" text="1">
+                                          <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="จำนวน">
+                                                   <font>
+                                                      <Font size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TextField maxWidth="182.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="150.0" promptText="type here" text="1">
+                                                         <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ชิ้น">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
-                                          </TextField>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ชิ้น">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets left="10.0" />
-                                             </HBox.margin>
-                                          </Text>
+                                          </VBox>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" ประเภท">
+                                                   <font>
+                                                      <Font size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <MenuButton mnemonicParsing="false" prefHeight="30.0" prefWidth="170.0" text="MenuButton">
+                                                         <items>
+                                                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                                                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                                                         </items>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </HBox.margin>
+                                                      </MenuButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
                                        </children>
                                        <VBox.margin>
-                                          <Insets top="10.0" />
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ข้อมูลติดต่อ">
+                                                   <font>
+                                                      <Font size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="เบอร์โทร">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <TextField maxWidth="182.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="150.0" promptText="type here">
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Facebook">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <TextField maxWidth="182.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="150.0" promptText="type here">
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="15.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="30.0" />
                                        </VBox.margin>
                                     </HBox>
 
