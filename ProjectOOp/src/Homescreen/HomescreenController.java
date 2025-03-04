@@ -6,6 +6,7 @@ package Homescreen;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -84,8 +85,8 @@ public class HomescreenController implements Initializable {
 
 
 	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+	public void initialize(URL location, ResourceBundle arg1) {
+		 
 	}
 	
 	
@@ -103,19 +104,32 @@ public class HomescreenController implements Initializable {
 	
 	public void sellbuttonclicked(MouseEvent e) {
 		try {
+            
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/SellScreen/Sellscreen.fxml"));
 			root = loader.load();
 			stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);
-			stage.setResizable(true);
+			stage.setResizable(false);
 			stage.centerOnScreen();
-			stage.show();
 			
+			stage.show();
+            
 		} catch (Exception e2) {
 			e2.printStackTrace();
 		}
 	}
+	
+	
+	public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    public void setMaximized(boolean isMaximized) {
+        if (stage != null) {
+            stage.setMaximized(isMaximized);
+        }
+    }
 	
     
 }
