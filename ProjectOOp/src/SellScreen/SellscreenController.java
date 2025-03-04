@@ -1,5 +1,6 @@
 package SellScreen;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -68,6 +69,10 @@ public class SellscreenController {
 				e2.printStackTrace();
 			}
 	    }
+
+  
+
+
 
 	    @FXML
 	    void sellbuttonclicked(ActionEvent e) {

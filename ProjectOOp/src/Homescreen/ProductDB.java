@@ -68,14 +68,17 @@ public class ProductDB {
 	            ResultSet resultSet = statement.executeQuery(query);
 	             
 	             while (resultSet.next()) {
-	            	 byte[] imageData = resultSet.getBytes("image_data");
-	                 if (imageData != null) {
-	                     ByteArrayInputStream inputStream = new ByteArrayInputStream(imageData);
-	                     
-	                 }
+	            	 
 	                int id = resultSet.getInt("id");
 	                String name = resultSet.getString("name");
 	                double price = resultSet.getDouble("price");
+	                
+	                
+	                
+	                byte[] imageData = resultSet.getBytes("image_data");
+	                 if (imageData != null) {
+	                     ByteArrayInputStream inputStream = new ByteArrayInputStream(imageData);
+	                 }
 	                //products.add(new Product(id, name, price,new Image(InputStream));
 	            	}
             
