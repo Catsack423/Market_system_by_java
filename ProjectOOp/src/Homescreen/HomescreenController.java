@@ -137,14 +137,6 @@ public class HomescreenController implements Initializable {
 		}
 	}
 	
-        this.stage = stage;
-    }
 
-    public void setMaximized(boolean isMaximized) {
-        if (stage != null) {
-            stage.setMaximized(isMaximized);
-        }
-    }
-	
-    
+   
 }
