@@ -2,7 +2,15 @@ package ClassHelper;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+
 import java.sql.SQLException;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import Homescreen.Product;
+
 
 public class ConnecttionDVBproducts {
 	public static Connection conect_productDB() {
@@ -42,4 +50,35 @@ public class ConnecttionDVBproducts {
             return null;
         }
 	}
+
+
+
+	public static  void InssertProductTODB(Product product) {
+		try {
+	    	Connection connection = conect_productDB();
+	    	Statement statement = connection.createStatement();
+	    	String insertProductString= "INSERT INTO products" + " (price,date,name,category,description,"
+	    			+ "username,fbid,tell,image_data,amount) "
+					+ "VALUES(?,?,?,?,?,?,?,?,?,?)";//10 prepre
+	    	PreparedStatement prepar = connection.prepareStatement(insertProductString);
+	    	prepar.setDouble(1, product.getPrice());
+	    	prepar.setDate(2, product.getDate()); 
+	    	prepar.setString(3, product.getNameString());
+	    	prepar.setString(4, product.getCategory());
+	    	prepar.setString(5, product.getDescription());
+	    	prepar.setString(6, product.getUsername());
+	    	prepar.setString(7, product.getFbid());
+	    	prepar.setString(8, product.getTell());
+	    	prepar.setBytes(9, product.getImagebyte());
+	    	prepar.setInt(10, product.getAmount());
+	    	prepar.executeUpdate();
+	    	
+	        System.out.println("Insert success!");
+
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+	}
+
 }
