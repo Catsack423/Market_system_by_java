@@ -1,11 +1,17 @@
 package Homescreen;
 
-import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.sql.Date;
+
+import javax.imageio.ImageIO;
+
+import javafx.scene.image.Image;
 
 public class Product {
 	private String nameString;
 	private String username;
+	private int amount;
 	private double price;
 	private Date date;
 	private String description;
@@ -13,12 +19,14 @@ public class Product {
 	private String tell;
 	private String fbid;
 	private Image image;
+	private byte[] imagebyte;
 	
 	public Product() {}
 	
-	public Product(String nameString, String username, double price, Date date, String description, String category, String tell, String fbid,Image image) {
+	public Product(String nameString, String username,int amount ,double price, Date date, String description, String category, String tell, String fbid,Image image) {
         this.nameString = nameString;
         this.username = username;
+        this.amount=amount;
         this.price = price;
         this.date = date;
         this.description = description;
@@ -26,8 +34,14 @@ public class Product {
         this.tell = tell;
         this.fbid = fbid;
         this.image = image;
+        this.imagebyte = imageToBytes(this.image);
     }
 
+	
+	public byte[] getImagebyte() {
+		return imagebyte;
+	}	
+	
 	public Image getImage() {
 		return image;
 	}
@@ -115,6 +129,41 @@ public class Product {
 		this.fbid = fbid;
 	}
 	
+	public int getAmount() {
+		return amount;
+	}
+	
+	@Override
+	public String toString() {
+	    return "Product{" +
+	            "name='" + nameString + '\'' +
+	            ", username='" + username + '\'' +
+	            ", amount=" + amount +
+	            ", price=" + price +
+	            ", date=" + date +
+	            ", description='" + description + '\'' +
+	            ", category='" + category + '\'' +
+	            ", tell='" + tell + '\'' +
+	            ", fbid='" + fbid + '\'' +
+	            ", image=" + image +
+	            '}';
+	}
+	
+    public static byte[] imageToBytes(Image image)  {
+        BufferedImage bufferedImage = javafx.embed.swing.SwingFXUtils.fromFXImage(image, null);
+        try {
+        	// เขียนเป็น ByteArrayOutputStream
+	        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+	        ImageIO.write(bufferedImage, "png", baos); // หรือ "jpg" ตามต้องการ
+	        return baos.toByteArray();
+		} catch (Exception e) {
+			System.out.println("Image to byte Eror");
+			e.printStackTrace();
+			return null;
+		}
+        
+    }
+
 	
 	
 	

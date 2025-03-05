@@ -192,7 +192,7 @@
                         <Insets />
                      </opaqueInsets>
                   </HBox>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="1003.0" style="-fx-background-color: FFFFFF;">
+                  <HBox alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="1003.0" style="-fx-background-color: E7E7E7;">
                      <children>
                         <Button mnemonicParsing="false" text="Button" />
                         <Button contentDisplay="CENTER" mnemonicParsing="false" text="Button" />
