@@ -7,7 +7,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import SellScreen.SellscreenController;
+
 import javafx.application.Platform;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -113,19 +115,20 @@ public class HomescreenController implements Initializable {
 			scene = new Scene(root);
 			stage.setScene(scene);
 			stage.setResizable(true);
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
+
 			stage.centerOnScreen();
-=======
+
 			SellscreenController sellscreenController = loader.getController();
 			sellscreenController.setandisplay_username(getUsername());
 			
 			
 			
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
 			stage.show();
+
+			
+			
+
 			Platform.runLater(() -> {
 	            if(wasMaximized) {
 	            	Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
