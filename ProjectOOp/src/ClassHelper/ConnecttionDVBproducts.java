@@ -2,12 +2,17 @@ package ClassHelper;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+
+
 import java.sql.Statement;
 
 import Homescreen.Product;
+
 
 public class ConnecttionDVBproducts {
 	public static Connection conect_productDB() {
@@ -49,6 +54,7 @@ public class ConnecttionDVBproducts {
 	}
 
 
+
 	public static  void InssertProductTODB(Product product) {
 		try {
 	    	Connection connection = conect_productDB();
@@ -76,4 +82,5 @@ public class ConnecttionDVBproducts {
 			e.printStackTrace();
 		}
 	}
+
 }
