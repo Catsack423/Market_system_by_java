@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnecttionDVBproducts {
-	public Connection conect_productDB() {
+	public static Connection conect_productDB() {
 		try {
             // แสดง message เพื่อตรวจสอบว่าเข้าถึงเมธอดนี้หรือไม่
             System.out.println("กำลังเชื่อมต่อกับฐานข้อมูล...");
