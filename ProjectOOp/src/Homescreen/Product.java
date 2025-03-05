@@ -2,10 +2,12 @@ package Homescreen;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.sql.Date;
 
 import javax.imageio.ImageIO;
 
+import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 
 public class Product {
@@ -150,17 +152,21 @@ public class Product {
 	}
 	
     public static byte[] imageToBytes(Image image)  {
-        BufferedImage bufferedImage = javafx.embed.swing.SwingFXUtils.fromFXImage(image, null);
+    	if (image == null) {
+            System.out.println("Error: Image is null!");
+            return null;
+        }
+        
+        BufferedImage bufferedImage = SwingFXUtils.fromFXImage(image, null);
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        
         try {
-        	// เขียนเป็น ByteArrayOutputStream
-	        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-	        ImageIO.write(bufferedImage, "png", baos); // หรือ "jpg" ตามต้องการ
-	        return baos.toByteArray();
-		} catch (Exception e) {
-			System.out.println("Image to byte Eror");
-			e.printStackTrace();
-			return null;
-		}
+            ImageIO.write(bufferedImage, "png", outputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        return outputStream.toByteArray();
         
     }
 
