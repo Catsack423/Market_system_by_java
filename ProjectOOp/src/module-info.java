@@ -14,4 +14,5 @@ module ProjectOOp {
 	opens ClassHelper to javafx.graphics,javafx.fxml;
 	opens Homescreen to javafx.graphics,javafx.fxml;
 	opens SellScreen to javafx.graphics,javafx.fxml;
+	opens Homescreen.Showproductpane to javafx.graphics,javafx.fxml;
 }
