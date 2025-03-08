@@ -11,6 +11,7 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 
 public class Product {
+	private int id;
 	private String nameString;
 	private String username;
 	private int amount;
@@ -27,6 +28,23 @@ public class Product {
 	
 	public Product(String nameString, String username,int amount ,double price, Date date, String description, String category, String tell, String fbid,Image image) {
         this.nameString = nameString;
+        this.username = username;
+        this.amount=amount;
+        this.price = price;
+        this.date = date;
+        this.description = description;
+        this.category = category;
+        this.tell = tell;
+        this.fbid = fbid;
+        this.image = image;
+        this.imagebyte = imageToBytes(this.image);
+    }
+	
+	
+	
+	public Product(int id,String nameString, String username,int amount ,double price, Date date, String description, String category, String tell, String fbid,Image image) {
+        this.id=id;
+		this.nameString = nameString;
         this.username = username;
         this.amount=amount;
         this.price = price;

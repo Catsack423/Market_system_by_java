@@ -1,0 +1,16 @@
+.shadow{
+	-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1),10.0,0.0,0.0,10.0)
+	
+}
+
+.transparent{
+	-fx-background-color:rgba(0,0,0,0);
+}
+
+
+.showdetailbutton{
+	-fx-background-color:#A73B24 ;
+	-fx-background-radius : 20px;
+	-fx-background-size: 10px;
+	-fx-cursor: HAND;
+}

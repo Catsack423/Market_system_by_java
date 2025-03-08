@@ -3,6 +3,7 @@ package Homescreen;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -71,15 +72,26 @@ public class ProductDB {
 	            	 
 	                int id = resultSet.getInt("id");
 	                String name = resultSet.getString("name");
+	                String username= resultSet.getString("username");
 	                double price = resultSet.getDouble("price");
-	                
-	                
+	                Date date = resultSet.getDate("date");
+	                String category = resultSet.getString("category");
+	                String description = resultSet.getString("description");
+	                String fbid = resultSet.getString("fbid");
+	                String tell = resultSet.getString("tell");
+	                int amout = resultSet.getInt("amount");
 	                
 	                byte[] imageData = resultSet.getBytes("image_data");
 	                 if (imageData != null) {
 	                     ByteArrayInputStream inputStream = new ByteArrayInputStream(imageData);
-	                 }
-	                //products.add(new Product(id, name, price,new Image(InputStream));
+	                     products.add(new Product(id, name, username, amout, price, date, 
+		                		 description, category, tell, fbid, new Image(inputStream)));
+	                 }else {
+	                	 System.out.println("cannot add product list");
+	                	 return null;
+					}
+	                 
+	         
 	            	}
             
         } catch (SQLException e) {
