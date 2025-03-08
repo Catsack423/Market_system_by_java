@@ -31,7 +31,7 @@
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="shadow" stylesheets="@HomescreenStyle.css">
                      <children>
-                        <ImageView fitHeight="101.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="loginimageview" fitHeight="101.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@Male%20User.png" />
                            </image>
@@ -191,12 +191,6 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
-                  </HBox>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="1003.0" style="-fx-background-color: E7E7E7;">
-                     <children>
-                        <Button mnemonicParsing="false" text="Button" />
-                        <Button contentDisplay="CENTER" mnemonicParsing="false" text="Button" />
-                     </children>
                   </HBox>
                   <HBox prefHeight="48.0" prefWidth="1003.0" VBox.vgrow="ALWAYS">
                      <children>

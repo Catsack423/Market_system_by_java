@@ -6,14 +6,17 @@ package Homescreen;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import Homescreen.Showproductpane.ShowproductController;
 import SellScreen.SellscreenController;
 
 import javafx.application.Platform;
-
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -22,6 +25,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Screen;
@@ -29,11 +33,14 @@ import javafx.stage.Stage;
 
 public class HomescreenController implements Initializable {
 
-    @FXML
+	@FXML
     private Button buybutton;
 
     @FXML
     private GridPane gridproduct;
+
+    @FXML
+    private ImageView loginimageview;
 
     @FXML
     private ImageView logoutImage;
@@ -55,6 +62,8 @@ public class HomescreenController implements Initializable {
     private Stage stage;
 	private Scene scene;
 	private Parent root;
+	ObservableList<Product> products = FXCollections.observableArrayList();
+	ObservableList<Product> show_product = FXCollections.observableArrayList();
 
     
     
@@ -90,7 +99,42 @@ public class HomescreenController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle arg1) {
-		 
+		products = ProductDB.getProducts();
+		
+		if(products==null || products.isEmpty()) {
+			System.out.println("Product list in initialize is null");
+			return ;
+		}
+		for (Product product : products) {
+			System.out.println(product.toString());
+		}
+		
+		int row=0,col=3;
+		try {	
+		for (int i = 0; i < products.size(); i++) {
+			
+				FXMLLoader loader = new FXMLLoader();
+				loader.setLocation(getClass().getResource("/Homescreen/Showproductpane/Showproductpane.fxml"));
+				AnchorPane anchorPane = loader.load();
+				
+				ShowproductController showproductController = loader.getController();
+				showproductController.setanddisplayproduct(products.get(i));
+
+				if(col==3) {
+					col=0;
+					row++;
+				}
+				gridproduct.add(anchorPane, col++, row);
+				GridPane.setMargin(anchorPane, new Insets(10));
+				
+				
+				}
+		} catch (Exception e) {
+			System.out.println(e.toString());
+			e.printStackTrace();
+		}
+		
+		
 	}
 	
 	
@@ -102,7 +146,7 @@ public class HomescreenController implements Initializable {
 	
 	
 	public void buybuttonclicked(ActionEvent e) {
-		System.out.println("buy");
+		System.out.println("buy button got clicked");
 		
 	}
 	
@@ -153,5 +197,7 @@ public class HomescreenController implements Initializable {
 	}
 	
 
-   
+	public  void addtogridpane(ObservableList<Product> p) {
+		
+	}
 }
