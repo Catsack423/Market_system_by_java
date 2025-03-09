@@ -78,9 +78,6 @@ public class HomescreenController implements Initializable {
 			root = loader.load();
 			stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 			scene = new Scene(root);
-
-
-
 			Stage stage2 = new Stage();
 			stage.close();
 			stage2.setScene(scene);
@@ -88,7 +85,6 @@ public class HomescreenController implements Initializable {
 			stage2.setResizable(false);
 			stage2.centerOnScreen();
 			stage2.show();
-
 		} catch (Exception e2) {
 			e2.printStackTrace();
 		}
@@ -132,9 +128,7 @@ public class HomescreenController implements Initializable {
 					row++;
 				}
 				gridproduct.add(anchorPane, col++, row);
-				GridPane.setMargin(anchorPane, new Insets(10));
-				
-				
+				GridPane.setMargin(anchorPane, new Insets(10));				
 				}
 		} catch (Exception e) {
 			System.out.println(e.toString());
@@ -204,11 +198,9 @@ public class HomescreenController implements Initializable {
 	}
 	
 
-
 	public  void addtogridpane(ObservableList<Product> p) {
 		
 	}
 	
 	
-
 }

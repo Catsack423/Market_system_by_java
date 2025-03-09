@@ -31,12 +31,12 @@
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="shadow" stylesheets="@HomescreenStyle.css">
                      <children>
-                        <ImageView fx:id="loginimageview" fitHeight="101.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="101.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@ImageSoruce/Male%20User.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="usernamelabel" alignment="TOP_LEFT" prefHeight="29.0" prefWidth="130.0" textFill="WHITE">
+                        <Label fx:id="usernamelabel" alignment="TOP_LEFT" prefHeight="29.0" prefWidth="130.0" text="Username" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>
