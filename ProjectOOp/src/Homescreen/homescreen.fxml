@@ -33,7 +33,7 @@
                      <children>
                         <ImageView fx:id="loginimageview" fitHeight="101.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Male%20User.png" />
+                              <Image url="@ImageSoruce/Male%20User.png" />
                            </image>
                         </ImageView>
                         <Label fx:id="usernamelabel" alignment="TOP_LEFT" prefHeight="29.0" prefWidth="130.0" textFill="WHITE">
@@ -46,94 +46,224 @@
                         <Insets left="10.0" top="10.0" />
                      </padding>
                   </HBox>
+                  <HBox alignment="CENTER_LEFT" focusTraversable="true" layoutX="10.0" layoutY="122.0" prefHeight="60.0" prefWidth="277.0" styleClass="shadow">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="Home" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../SellScreen/Imagesource/HomeIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button-category" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" focusTraversable="true" prefHeight="60.0" prefWidth="277.0" styleClass="shadow">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="ผัก" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageSoruce/Carrot.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button-category" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets right="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="ขนมปัง" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageSoruce/Croissant.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button-category" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="อาหาร" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageSoruce/Food%20Bar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button-category" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="เครื่องใช้ไฟฟ้า" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageSoruce/Electrical.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button-category" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="เครื่องดื่ม" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../SellScreen/Imagesource/Orange%20Soda%20Bottle%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button-category" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="เนื้อสัตว์/อาหารทะเล" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../SellScreen/Imagesource/Meat%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button-category" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="ของใช้ภายในบ้าน" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../SellScreen/Imagesource/Armchair%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button-category" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0" styleClass="shadow">
                      <children>
-                        <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Carrot.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets left="40.0" />
-                           </HBox.margin>
-                        </ImageView>
-                        <Label prefHeight="27.0" prefWidth="33.0" styleClass="shadow" text="ผัก" textFill="WHITE">
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="อื่นๆ" textFill="WHITE">
                            <font>
-                              <Font size="24.0" />
+                              <Font size="22.0" />
                            </font>
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </Label>
+                           <graphic>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="46.0" text="•" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button-category" />
+                           </styleClass>
+                        </Button>
                      </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
-                     <children>
-                        <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
-                           <image>
-                              <Image url="@Croissant.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets left="40.0" />
-                           </HBox.margin>
-                        </ImageView>
-                        <Label prefHeight="35.0" prefWidth="101.0" text="ขนมปัง" textFill="WHITE">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
-                     <children>
-                        <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Food%20Bar.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets left="40.0" />
-                           </HBox.margin>
-                        </ImageView>
-                        <Label prefHeight="35.0" prefWidth="100.0" text="อาหาร" textFill="WHITE">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
-                     <children>
-                        <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Electrical.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets left="40.0" />
-                           </HBox.margin>
-                        </ImageView>
-                        <Label prefHeight="35.0" prefWidth="153.0" text="เครื่องใช้ไฟฟ้า" textFill="WHITE">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <Pane prefHeight="320.0" prefWidth="287.0" VBox.vgrow="ALWAYS" />
+                  <Pane prefHeight="35.0" prefWidth="278.0" VBox.vgrow="ALWAYS" />
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="246.0" styleClass="shadow">
                      <children>
                         <Button fx:id="logoutbutton" graphicTextGap="10.0" mnemonicParsing="false" onAction="#logouticongetClicked" prefHeight="59.0" prefWidth="222.0" text="Log out" textAlignment="CENTER">
                            <graphic>
                               <ImageView fx:id="logoutImage" fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@log%20out.png" />
+                                    <Image url="@ImageSoruce/log%20out.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -149,6 +279,7 @@
                            <styleClass>
                               <String fx:value="logouthbox" />
                               <String fx:value="shadow" />
+                              <String fx:value="text" />
                            </styleClass>
                         </Button>
                      </children>
@@ -170,7 +301,7 @@
                      <children>
                         <Label fx:id="selllabel" graphicTextGap="5.0" onMouseClicked="#sellbuttonclicked" prefHeight="40.0" prefWidth="113.0" styleClass="sellButton" text="ขาย">
                            <graphic>
-                              <Button fx:id="buybutton" alignment="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#buybuttonclicked" prefHeight="40.0" prefWidth="66.0" style="-fx-background-insets: 2;" text="ซื้อ" textFill="WHITE">
+                              <Button fx:id="buybutton" alignment="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#buybuttonclicked" prefHeight="40.0" prefWidth="66.0" style="-fx-background-insets: 2; -fx-cursor: DEFAULT;" text="ซื้อ" textFill="WHITE">
                                  <font>
                                     <Font size="19.0" />
                                  </font>

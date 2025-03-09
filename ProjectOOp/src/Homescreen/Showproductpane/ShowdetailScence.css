@@ -13,8 +13,15 @@
 .closebutton{
 	-fx-background-color:#A73B24 ;
 	-fx-background-radius : 20px;
-	-fx-background-size: 10px;
+	
 	-fx-cursor: HAND;
+}
+
+.closebutton:hover{
+	-fx-border-color:rgba(0,0,0,0) ;
+	
+	
+	
 }
 
 

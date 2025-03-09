@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import Homescreen.Product;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,6 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class ShowproductController implements Initializable{
 	  	@FXML
@@ -74,11 +76,25 @@ public class ShowproductController implements Initializable{
 		    	
 		    	Stage secondStage = new Stage();
 		    	Scene scene = new Scene(root);
+		    	
+		    	  secondStage.iconifiedProperty().addListener((obs, oldVal, newVal) -> {
+		              if (newVal) {
+		                 //System.out.println("Second Stage minimized");
+		                  secondStage.close(); // ปิด Stage เมื่อถูกย่อขนาด
+		              } else {
+		                  System.out.println("Second Stage restored");
+		              }
+		          });
+
+
+		    	
+		    	
 		    	secondStage.setScene(scene);
 		    	secondStage.centerOnScreen();
 		    	secondStage.setResizable(false);
 		    	secondStage.setTitle("รายละเอียดสินค้า");
 		    	secondStage.show();
+		    	
 		    	
 			} catch (Exception e2) {
 				e2.printStackTrace();
