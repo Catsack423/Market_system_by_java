@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.ResourceBundle;
 
 import ClassHelper.Alertmeassage;
+import ClassHelper.ConnecttionDVBproducts;
 import application.LoginSceneController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -82,7 +83,7 @@ public class SinginSceneController implements Initializable {
 			// check if username already used if not go to log in
 			try {
 				String checkUsernameString = "SELECT * FROM useraccount WHERE username = '" + username + "'";
-				Connection connect = LoginSceneController.connectionDB();
+				Connection connect = ConnecttionDVBproducts.conect_productDB();
 				statement = connect.createStatement();
 				result = statement.executeQuery(checkUsernameString);
 				if (result.next()) {
