@@ -1,3 +1,4 @@
+
 .shadow{
 	-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1),10.0,0.0,0.0,10.0)
 	
@@ -19,12 +20,7 @@
 
 .closebutton:hover{
 	-fx-border-color:rgba(0,0,0,0) ;
-	
-	
-	
+
 }
 
 
-.textarea{
-	-fx-backgroud-radius: 20px;
-}

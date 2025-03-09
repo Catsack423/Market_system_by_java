@@ -96,7 +96,7 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="Showdetailbutton" mnemonicParsing="false" onAction="#showdetailbuttonhandle" prefHeight="38.0" prefWidth="152.0" styleClass="showdetailbutton" text="ดูรายละเอียดเพิ่มติม" textFill="WHITE">
+                        <Button fx:id="Showdetailbutton" mnemonicParsing="false" onAction="#showdetailbuttonhandle" prefHeight="38.0" prefWidth="152.0" styleClass="showdetailbutton" text="ดูรายละเอียดเพิ่มเติม" textFill="WHITE">
                            <font>
                               <Font size="16.0" />
                            </font>

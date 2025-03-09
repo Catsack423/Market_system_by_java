@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 .shadow{
 	-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1),10.0,0.0,0.0,10.0)
 	
@@ -10,6 +17,13 @@
 	-fx-background-radius: 0 20px 20px 0; /* มุมซ้าย 0, มุมขวา 30px */
 
 }
+
+
+
+
+
+
+
 
 .transparent{
 	-fx-background-color:rgba(0,0,0,0);
@@ -28,6 +42,7 @@
 	-fx-background-radius : 20px;
 	
 	
+	
 }
 
 
@@ -36,6 +51,7 @@
 	-fx-background-radius : 50px;
 	-fx-border-radius:30px;
 	-fx-cursor: HAND;
+	
 }
 
 
@@ -48,20 +64,31 @@
 }
 
 .text-field {
-    -fx-background-color: rgba(0,0,0,0);  /* สีพื้นหลัง */
-    -fx-border-color: #cccc;  /* สีขอบ */
-    -fx-border-radius: 5px;  /* ทำให้ขอบโค้งมน */
+    -fx-background-color: rgba(0,0,0,0);  
+    -fx-border-color: #cccc; 
+    -fx-border-radius: 5px;
+   
 	
    
 }
 
-/* เมื่อ TextField ถูกเลือก (โฟกัส) */
+
 .text-field:focused {
-    -fx-border-color: #4A90E2;  /* เปลี่ยนสีขอบเมื่อคลิก */
+    -fx-border-color: #4A90E2;  
     -fx-background-color: #f4f4f4;
 }
 
 .button-category:hover {
     -fx-underline: true;
     -fx-cursor: HAND;
+}
+
+
+
+.submitButton{
+	-fx-background-color:#A73B24 ;
+	-fx-background-radius : 20px;
+	
+	
+	
 }

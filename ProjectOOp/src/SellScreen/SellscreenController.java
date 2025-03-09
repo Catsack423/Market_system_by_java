@@ -26,6 +26,7 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -101,38 +102,13 @@ public class SellscreenController implements Initializable{
 		private Scene scene;
 		private Parent root;
 		private Image image;
+		
 
+		
+		
 	    @FXML
-	    void buybuttonclicked(MouseEvent e) {
-	    	try {
-	    		final Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-	            final boolean wasMaximized = stage.isMaximized();
-	    		FXMLLoader loader = new FXMLLoader(getClass().getResource("/Homescreen/homescreen.fxml"));
-				root = loader.load();
-				HomescreenController homescreenController = loader.getController();
-				homescreenController.showandsetUsername(getUsername());			
-				
-				scene = new Scene(root);
-				stage.setScene(scene);
-				stage.setResizable(true);
-				
-				stage.show();
-				 Platform.runLater(() -> {
-			            if(wasMaximized) {
-			            	Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
-			                stage.setX(bounds.getMinX());
-			                stage.setY(bounds.getMinY());
-			                stage.setWidth(bounds.getWidth());
-			                stage.setHeight(bounds.getHeight());
-			                // ลองเรียก maximize อีกครั้ง
-			                stage.setMaximized(true);
-			            } else {
-			                stage.centerOnScreen();
-			            }
-			        });
-				 } catch (Exception e2) {
-				e2.printStackTrace();
-			}
+	    public void buybuttonclicked(MouseEvent e) {
+	    	navigateToHome(e);
 	    }	
 	    
 	    public void selectImagebutton(ActionEvent e) {
@@ -154,7 +130,37 @@ public class SellscreenController implements Initializable{
 	        }
 	    }
 	    
-	    
+	    private void navigateToHome(Event e) {
+	        try {
+	            final Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+	            final boolean wasMaximized = stage.isMaximized();
+	            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Homescreen/homescreen.fxml"));
+	            root = loader.load();
+	            HomescreenController homescreenController = loader.getController();
+	            homescreenController.showandsetUsername(getUsername());
+	            
+	            scene = new Scene(root);
+	            stage.setScene(scene);
+	            stage.setResizable(true);
+	            
+	            stage.show();
+	            Platform.runLater(() -> {
+	                if(wasMaximized) {
+	                    Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
+	                    stage.setX(bounds.getMinX());
+	                    stage.setY(bounds.getMinY());
+	                    stage.setWidth(bounds.getWidth());
+	                    stage.setHeight(bounds.getHeight());
+	                    // ลองเรียก maximize อีกครั้ง
+	                    stage.setMaximized(true);
+	                } else {
+	                    stage.centerOnScreen();
+	                }
+	            });
+	        } catch (Exception e2) {
+	            e2.printStackTrace();
+	        }
+	    }
 	    public String getUsername() {
 			return username;
 		}
@@ -164,7 +170,7 @@ public class SellscreenController implements Initializable{
 		}
 
 		@FXML
-	    void logouticongetClicked(ActionEvent e) {
+	   public void logouticongetClicked(ActionEvent e) {
 	    	System.out.println("HEllo world");
 			try {
 				FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/LoginScene.fxml"));
@@ -173,18 +179,13 @@ public class SellscreenController implements Initializable{
 				scene = new Scene(root);
 				Stage stage2 = new Stage();
 				stage.close();
-				
-				
+
 				stage2.setScene(scene);
 				stage2.setMaximized(false);
 				stage2.setResizable(false);
 				stage2.centerOnScreen();
 				stage2.show();
-				
-				
-				
-				
-				
+
 
 			} catch (Exception e2) {
 				e2.printStackTrace();
@@ -192,7 +193,7 @@ public class SellscreenController implements Initializable{
 	    }
 
 	    @FXML
-	    void sellbuttonclicked(ActionEvent e) {
+	    public void sellbuttonclicked(ActionEvent e) {
 	    	System.out.println("sell");
 	    }
 	
@@ -367,7 +368,7 @@ public class SellscreenController implements Initializable{
 
 		public void setMenuinitialize() {
 			ObservableList<MenuItem> listofmenubutton = FXCollections.observableArrayList();
-			List<String> listcategory = Arrays.asList("ผัก","ขนมปัง","อาหาร","เครื่องใช้ไฟฟ้า","เครื่องดื่ม","เนื้อสัตว์/อาหารทะเล","ของใช้ภายในบ้าน","อื่นๆ");
+			List<String> listcategory = Arrays.asList("ผัก/ผลไม้","ขนมปัง","อาหาร","เครื่องใช้ไฟฟ้า","เครื่องดื่ม","เนื้อสัตว์/อาหารทะเล","ของใช้ภายในบ้าน","อื่นๆ");
 			
 			listcategory.forEach((e)->{
 				listofmenubutton.add(new MenuItem(e));
@@ -379,7 +380,11 @@ public class SellscreenController implements Initializable{
 			        
 			}
 		}
-
+		
+		
+		public void homebuttonHandle(ActionEvent e) {
+			navigateToHome(e);
+		}
 
 }
 

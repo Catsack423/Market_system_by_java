@@ -59,7 +59,7 @@ public class ShowdetailController implements Initializable{
     	}
 		this.product=p;
 		productImageview.setImage(p.getImage());
-		telllabel.setText("เบอร์โทร" +p.getTell());
+		telllabel.setText("เบอร์โทร: " +p.getTell());
 		fbidlabel.setText("Facebook: "+p.getFbid());
 		pricelabel.setText("ราคา: "+ p.getPrice() +" บาท" );
 		nameproductlable.setText("ชื่อสินค้า: "+p.getNameString());

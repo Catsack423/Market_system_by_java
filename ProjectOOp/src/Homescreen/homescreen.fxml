@@ -48,7 +48,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" focusTraversable="true" layoutX="10.0" layoutY="122.0" prefHeight="60.0" prefWidth="277.0" styleClass="shadow">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="Home" textFill="WHITE">
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#homeButtonhandle" text="Home" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -71,7 +71,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" focusTraversable="true" prefHeight="60.0" prefWidth="277.0" styleClass="shadow">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="ผัก" textFill="WHITE">
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#CategoryButtonhandle" text="ผัก" textFill="WHITE">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -97,7 +97,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="ขนมปัง" textFill="WHITE">
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#CategoryButtonhandle" text="ขนมปัง" textFill="WHITE">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -120,7 +120,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="อาหาร" textFill="WHITE">
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#CategoryButtonhandle" text="อาหาร" textFill="WHITE">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -143,7 +143,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="เครื่องใช้ไฟฟ้า" textFill="WHITE">
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#CategoryButtonhandle" text="เครื่องใช้ไฟฟ้า" textFill="WHITE">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -166,7 +166,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="เครื่องดื่ม" textFill="WHITE">
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#CategoryButtonhandle" text="เครื่องดื่ม" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -189,7 +189,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="เนื้อสัตว์/อาหารทะเล" textFill="WHITE">
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#CategoryButtonhandle" text="เนื้อสัตว์/อาหารทะเล" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -212,7 +212,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="ของใช้ภายในบ้าน" textFill="WHITE">
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#CategoryButtonhandle" text="ของใช้ภายในบ้าน" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -235,7 +235,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0" styleClass="shadow">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="อื่นๆ" textFill="WHITE">
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#CategoryButtonhandle" text="อื่นๆ" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>

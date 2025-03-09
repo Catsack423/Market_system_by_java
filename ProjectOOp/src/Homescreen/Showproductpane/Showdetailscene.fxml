@@ -22,22 +22,22 @@
       </ImageView>
       <Label fx:id="nameproductlable" layoutX="314.0" layoutY="68.0" text="ชื่อสินค้า">
          <font>
-            <Font size="15.0" />
+            <Font size="18.0" />
          </font>
       </Label>
       <Label fx:id="pricelabel" layoutX="314.0" layoutY="178.0" text="ราคา">
          <font>
-            <Font size="15.0" />
+            <Font size="18.0" />
          </font>
       </Label>
       <Label fx:id="amountlabel" layoutX="507.0" layoutY="178.0" text="จำนวนสินค้า">
          <font>
-            <Font size="15.0" />
+            <Font size="18.0" />
          </font>
       </Label>
       <TextArea fx:id="detailproducttextArea" editable="false" layoutX="115.0" layoutY="262.0" prefHeight="134.0" prefWidth="570.0">
          <font>
-            <Font size="15.0" />
+            <Font size="17.0" />
          </font>
          <styleClass>
             <String fx:value="shadow" />
@@ -46,32 +46,32 @@
       </TextArea>
       <Label layoutX="115.0" layoutY="233.0" text="คำอธิบายสินค้า">
          <font>
-            <Font size="18.0" />
+            <Font size="20.0" />
          </font>
       </Label>
       <Label layoutX="115.0" layoutY="420.0" text="ช่องทางติดต่อ">
          <font>
-            <Font size="18.0" />
+            <Font size="20.0" />
          </font>
       </Label>
       <Label fx:id="categorylabel" layoutX="314.0" layoutY="128.0" text="ประเภท">
          <font>
-            <Font size="15.0" />
+            <Font size="18.0" />
          </font>
       </Label>
       <Label fx:id="telllabel" layoutX="115.0" layoutY="467.0" text="เบอร์โทร">
          <font>
-            <Font size="15.0" />
+            <Font size="18.0" />
          </font>
       </Label>
       <Label fx:id="fbidlabel" layoutX="115.0" layoutY="509.0" text="Facebook:">
          <font>
-            <Font size="15.0" />
+            <Font size="18.0" />
          </font>
       </Label>
       <Button fx:id="closebutton" layoutX="353.0" layoutY="559.0" mnemonicParsing="false" onAction="#handleclosebutton" prefHeight="38.0" prefWidth="94.0" styleClass="closebutton" text="Close" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font size="22.0" />
          </font>
       </Button>
    </children>

@@ -53,7 +53,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0" styleClass="shadow">
                      <children>
-                        <Button fx:id="Homebutton" graphicTextGap="20.0" mnemonicParsing="false" text="Home" textFill="WHITE">
+                        <Button fx:id="Homebutton" graphicTextGap="20.0" mnemonicParsing="false" onAction="#homebuttonHandle" text="Home" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -76,7 +76,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0" styleClass="shadow">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="ผัก" textFill="WHITE">
+                        <Button disable="true" graphicTextGap="20.0" mnemonicParsing="false" text="ผัก/ผลไม้" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -99,7 +99,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="ขนมปัง" textFill="WHITE">
+                        <Button disable="true" graphicTextGap="20.0" mnemonicParsing="false" text="ขนมปัง" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -122,7 +122,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="อาหาร" textFill="WHITE">
+                        <Button disable="true" graphicTextGap="20.0" mnemonicParsing="false" text="อาหาร" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -145,7 +145,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="เครื่องใช้ไฟฟ้า" textFill="WHITE">
+                        <Button disable="true" graphicTextGap="20.0" mnemonicParsing="false" text="เครื่องใช้ไฟฟ้า" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -168,7 +168,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="เครื่องดื่ม" textFill="WHITE">
+                        <Button disable="true" graphicTextGap="20.0" mnemonicParsing="false" text="เครื่องดื่ม" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -191,7 +191,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="เนื้อสัตว์/อาหารทะเล" textFill="WHITE">
+                        <Button disable="true" graphicTextGap="20.0" mnemonicParsing="false" text="เนื้อสัตว์/อาหารทะเล" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -214,7 +214,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="ของใช้ภายในบ้าน" textFill="WHITE">
+                        <Button disable="true" graphicTextGap="20.0" mnemonicParsing="false" text="ของใช้ภายในบ้าน" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -237,7 +237,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="277.0" styleClass="shadow">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" text="อื่นๆ" textFill="WHITE">
+                        <Button disable="true" graphicTextGap="20.0" mnemonicParsing="false" text="อื่นๆ" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -346,7 +346,7 @@
                                           <Font size="19.0" />
                                        </font>
                                     </Text>
-                                    <TextField fx:id="productnameTextFeild" maxHeight="32.0" maxWidth="400.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="461.0" promptText="type here" styleClass="transparent">
+                                    <TextField fx:id="productnameTextFeild" maxHeight="32.0" maxWidth="400.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="461.0" styleClass="transparent">
                                        <VBox.margin>
                                           <Insets top="10.0" />
                                        </VBox.margin>
@@ -418,7 +418,7 @@
                                                 </Text>
                                                 <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                                                    <children>
-                                                      <MenuButton fx:id="menucategorybutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="170.0">
+                                                      <MenuButton fx:id="menucategorybutton" mnemonicParsing="false" prefHeight="30.0" prefWidth="170.0" style="-fx-border-color: ccc; -fx-border-radius: 5;">
                                                          <items>
                                                             <MenuItem mnemonicParsing="false" text="Action 1" />
                                                             <MenuItem mnemonicParsing="false" text="Action 2" />
@@ -429,6 +429,10 @@
                                                          <HBox.margin>
                                                             <Insets top="10.0" />
                                                          </HBox.margin>
+                                                         <styleClass>
+                                                            <String fx:value="shadow" />
+                                                            <String fx:value="transparent" />
+                                                         </styleClass>
                                                       </MenuButton>
                                                    </children>
                                                 </HBox>
@@ -509,7 +513,7 @@
                                           <Cursor fx:constant="DEFAULT" />
                                        </cursor>
                                     </ImageView>
-                                    <Button fx:id="selectpicturebutton" mnemonicParsing="false" onAction="#selectImagebutton" text="เลือกรูปภาพ">
+                                    <Button fx:id="selectpicturebutton" mnemonicParsing="false" onAction="#selectImagebutton" style="-fx-background-color: FFFFFF; -fx-background-radius: 20;" text="เลือกรูปภาพ">
                                        <VBox.margin>
                                           <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                                        </VBox.margin>
@@ -547,7 +551,7 @@
                               </TextArea>
                               <HBox alignment="CENTER" prefHeight="64.0" prefWidth="943.0">
                                  <children>
-                                    <Button fx:id="submitbuttion" mnemonicParsing="false" onAction="#handlesubmitbutton" prefHeight="39.0" prefWidth="69.0" text="ขาย">
+                                    <Button fx:id="submitbuttion" mnemonicParsing="false" onAction="#handlesubmitbutton" prefHeight="39.0" prefWidth="69.0" styleClass="submitButton" text="ขาย" textFill="WHITE" wrapText="true">
                                        <HBox.margin>
                                           <Insets bottom="20.0" />
                                        </HBox.margin>

@@ -51,10 +51,10 @@ public class LoginSceneController implements Initializable{
     @FXML
     private Label ErorLabel;
     
-    private Connection connect;
+    
     private PreparedStatement prepar;
     private ResultSet result;
-    private Statement statement;
+    
     private Stage stage;
 	private Scene scene;
 	private Parent root;
@@ -143,20 +143,7 @@ public class LoginSceneController implements Initializable{
     }
     
     
-    
-    void delay2second(int time) {
-    	Timer timer = new Timer();
-    	timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-            	ErorLabel.setVisible(false);
-                timer.cancel(); // ปิด Timer เมื่อทำงานเสร็จ
-            }
-        }, time*1000);
-    }
-
-
-
+  
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		UsernameTextFiled.setOnKeyPressed(event -> {

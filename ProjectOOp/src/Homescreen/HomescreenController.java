@@ -4,7 +4,9 @@ package Homescreen;
 
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.stream.Collectors;
 
 import Homescreen.Showproductpane.ShowproductController;
 import SellScreen.SellscreenController;
@@ -63,7 +65,7 @@ public class HomescreenController implements Initializable {
 	private Scene scene;
 	private Parent root;
 	ObservableList<Product> products = FXCollections.observableArrayList();
-	ObservableList<Product> show_product = FXCollections.observableArrayList();
+	List<Product> fliter_product = FXCollections.observableArrayList();
 
     
     
@@ -102,26 +104,48 @@ public class HomescreenController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle arg1) {
-		products = ProductDB.getProducts();
-		
-		if(products==null || products.isEmpty()) {
-			System.out.println("Product list in initialize is null");
-			return ;
+		if(gridproduct.getChildren().isEmpty() || gridproduct.getChildren().size() < 0) {
+			products = ProductDB.getProducts();
+			if(products==null || products.isEmpty()) {
+				System.out.println("Product list in initialize is null");
+				return ;
+			}
+			setanddiplayingridpane(products);
 		}
-		for (Product product : products) {
-			System.out.println(product.toString());
-		}
 		
+	}
+	
+	
+	
+	
+	public void CategoryButtonhandle(ActionEvent e) {
+		Button Category = (Button) e.getSource();
+		System.out.println(Category.getText());
+		fliter_product = products.stream()
+				.filter(products-> products.getCategory().equals(Category.getText()))
+				.collect(Collectors.toList());
+		for (Product product : fliter_product) {
+			System.out.println(product.getNameString());
+		}
+		setanddiplayingridpane(fliter_product);
+		
+	}
+	
+	
+	
+	
+	public void setanddiplayingridpane(List<Product> fliter_product2) {
+		gridproduct.getChildren().clear();
 		int row=0,col=3;
 		try {	
-		for (int i = 0; i < products.size(); i++) {
+		for (int i = 0; i < fliter_product2.size(); i++) {
 			
 				FXMLLoader loader = new FXMLLoader();
 				loader.setLocation(getClass().getResource("/Homescreen/Showproductpane/Showproductpane.fxml"));
 				AnchorPane anchorPane = loader.load();
 				
 				ShowproductController showproductController = loader.getController();
-				showproductController.setanddisplayproduct(products.get(i));
+				showproductController.setanddisplayproduct(fliter_product2.get(i));
 
 				if(col==3) {
 					col=0;
@@ -135,9 +159,7 @@ public class HomescreenController implements Initializable {
 			e.printStackTrace();
 		}
 		
-		
 	}
-	
 	
 	public void showandsetUsername(String username) {
 		this.username=username;
@@ -165,6 +187,7 @@ public class HomescreenController implements Initializable {
 
 			SellscreenController sellscreenController = loader.getController();
 			sellscreenController.setandisplay_username(getUsername());
+			
 			
 			
 			
@@ -198,8 +221,8 @@ public class HomescreenController implements Initializable {
 	}
 	
 
-	public  void addtogridpane(ObservableList<Product> p) {
-		
+	public void homeButtonhandle(ActionEvent e) {
+		setanddiplayingridpane(products);
 	}
 	
 	

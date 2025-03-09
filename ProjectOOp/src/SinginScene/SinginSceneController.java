@@ -48,9 +48,7 @@ public class SinginSceneController implements Initializable {
 	private PreparedStatement prepar;
 	private ResultSet result;
 	private Statement statement;
-	private Stage stage;
-	private Scene scene;
-	private Parent root;
+	
 
 	public void CreatAccount(ActionEvent e) {
 		//ปุ่มcreate account
@@ -103,9 +101,9 @@ public class SinginSceneController implements Initializable {
 						Alertmeassage alertmeassage = new Alertmeassage();
 						alertmeassage.succesMessage("Create Account successful");
 						FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/LoginScene.fxml"));
-						root = loader.load();
-						stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-						scene = new Scene(root);
+						Parent root = loader.load();
+						Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+						Scene scene = new Scene(root);
 						stage.setScene(scene);
 						stage.setResizable(false);
 						stage.show();
