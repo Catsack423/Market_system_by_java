@@ -26,10 +26,16 @@
 .buyButton{
 	-fx-background-color:#A73B24 ;
 	-fx-background-radius : 20px;
-	
-	
+
 }
 
+
+
+
+.button-category:hover {
+    -fx-underline: true;
+    -fx-cursor: HAND;
+}
 
 .sellButton{
 	-fx-background-color:#D9D9D9 ;
@@ -39,6 +45,11 @@
 }
 
 
+.text:focused {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-underline: true; /* ใช้ขีดเส้นใต้ */
+}
 
 .borderpane{
 	-fx-background-color:#E7E7E7;

@@ -11,7 +11,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-
+import ClassHelper.ConnecttionDVBproducts;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.image.Image;
@@ -63,7 +63,7 @@ public class ProductDB {
         String query = "SELECT * FROM products";
 
         try {
-	        	Connection connection = DBconnection();
+	        	Connection connection = ConnecttionDVBproducts.conect_productDB();
 	        	
 	            Statement statement = connection.createStatement();
 	            ResultSet resultSet = statement.executeQuery(query);
