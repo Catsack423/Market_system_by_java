@@ -60,3 +60,8 @@
     -fx-border-color: #4A90E2;  /* เปลี่ยนสีขอบเมื่อคลิก */
     -fx-background-color: #f4f4f4;
 }
+
+.button-category:hover {
+    -fx-underline: true;
+    -fx-cursor: HAND;
+}
