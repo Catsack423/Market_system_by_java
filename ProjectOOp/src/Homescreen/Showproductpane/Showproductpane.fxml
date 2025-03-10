@@ -17,13 +17,13 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="538.0" style="-fx-background-insets: 10;" stylesheets="@showproductstyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Homescreen.Showproductpane.ShowproductController">
    <children>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: ccc; -fx-background-radius: 20; -fx-background-insets: 8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: ffffff; -fx-background-radius: 20; -fx-background-insets: 8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="CENTER" prefHeight="201.0" prefWidth="600.0">
                      <children>
-                        <ImageView fx:id="showpicimageview" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="showpicimageview" fitHeight="150.0" fitWidth="228.0" pickOnBounds="true">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>

@@ -54,3 +54,7 @@
 .borderpane{
 	-fx-background-color:#E7E7E7;
 }
+
+.scroll-pane .viewport {
+    -fx-background-color:#E7E7E7 ; /* Dark background inside */
+}

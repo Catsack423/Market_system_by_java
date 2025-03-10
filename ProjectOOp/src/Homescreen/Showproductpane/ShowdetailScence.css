@@ -23,4 +23,27 @@
 
 }
 
+.text-area {
+    
+    -fx-text-fill: black; /* สีตัวอักษร */
+    -fx-font-size: 16px;
+    -fx-border-color: #FFFFFF; /* สีขอบ */
+    -fx-border-width: 0px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
 
+.text-area .content {
+    -fx-background-color: #d3d3d3; /* สีพื้นหลังของเนื้อหาข้อความ */
+    -fx-padding: 10px;
+}
+
+.text-area:focused {
+    -fx-border-color: black; /* สีขอบเมื่อโฟกัส */
+}
+
+.text-area:disabled {
+    -fx-border-color: #FFFFFF; /* ลบขอบ */
+    
+    -fx-opacity: 1.0; /* ป้องกันข้อความซีดจาง */
+}

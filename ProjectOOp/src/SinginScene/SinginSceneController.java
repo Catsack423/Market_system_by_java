@@ -121,9 +121,9 @@ public class SinginSceneController implements Initializable {
 		//ย้ายกลับไปหน้าlogin
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/LoginScene.fxml"));
-			root = loader.load();
-			stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-			scene = new Scene(root);
+			Parent root = loader.load();
+			Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			stage.setResizable(false);
 			stage.show();

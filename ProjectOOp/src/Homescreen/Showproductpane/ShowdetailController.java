@@ -65,6 +65,7 @@ public class ShowdetailController implements Initializable{
 		nameproductlable.setText("ชื่อสินค้า: "+p.getNameString());
 		detailproducttextArea.setText(p.getDescription());
 		amountlabel.setText("จำนวนสินค้า: "+p.getAmount());
+		categorylabel.setText("ประเภท: "+p.getCategory());
 	
 	}
 
@@ -72,6 +73,8 @@ public class ShowdetailController implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		closebutton.requestFocus();
+		detailproducttextArea.setDisable(true);
+		detailproducttextArea.setStyle("-fx-border-color: transparent; -fx-background-color: #f0f0f0; -fx-opacity: 1.0;");
 	}
 
     

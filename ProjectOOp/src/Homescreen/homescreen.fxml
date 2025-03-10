@@ -71,7 +71,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" focusTraversable="true" prefHeight="60.0" prefWidth="277.0" styleClass="shadow">
                      <children>
-                        <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#CategoryButtonhandle" text="ผัก" textFill="WHITE">
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#CategoryButtonhandle" text="ผัก/ผลไม้" textFill="WHITE">
                            <font>
                               <Font size="24.0" />
                            </font>

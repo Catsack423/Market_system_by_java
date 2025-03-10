@@ -83,7 +83,7 @@ public class LoginSceneController implements Initializable{
     		Connection connect = ConnecttionDVBproducts.conect_productDB();
     		try {
     			//เชื่อมdatabaseเพื่อหาusername
-    			statement = connect.createStatement();
+    			Statement statement = connect.createStatement();
         		prepar=connect.prepareStatement(selectData);
         		prepar.setString(1, username);
         		prepar.setString(2, password);
