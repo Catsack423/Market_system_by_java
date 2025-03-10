@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -62,7 +63,13 @@
          <font>
             <Font size="21.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Button fx:id="ArrowbackButton" layoutX="27.0" layoutY="35.0" mnemonicParsing="false" onAction="#ArrowbackClicked" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 40;" styleClass="ArrowBackButton" stylesheets="@SinginScenceStyle.css" />
+      <Button fx:id="ArrowbackButton" layoutX="27.0" layoutY="35.0" mnemonicParsing="false" onAction="#ArrowbackClicked" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 40;" styleClass="ArrowBackButton" stylesheets="@SinginScenceStyle.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
    </children>
 </AnchorPane>

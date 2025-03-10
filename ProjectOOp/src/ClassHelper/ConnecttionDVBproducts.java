@@ -25,7 +25,7 @@ public class ConnecttionDVBproducts {
             System.out.println("โหลด Driver สำเร็จ");
             
             // สร้าง connection string ที่มีพารามิเตอร์เพิ่มเติม
-            String url = "jdbc:mysql://192.168.113.33:3306/marketapp";
+            String url = "jdbc:mysql://10.62.58.97:3306/marketapp";
             String user = "root";
             String password = "kimbap001";
             

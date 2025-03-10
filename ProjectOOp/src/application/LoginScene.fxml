@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -57,6 +58,9 @@
                <font>
                   <Font size="21.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="CreateAccountButton" minHeight="49.0" minWidth="170.0" mnemonicParsing="false" onAction="#creataccountclicked" prefWidth="199.0" styleClass="CreateAccoutbutton" stylesheets="@style.css" text="สร้างบัญชี">
                <VBox.margin>
@@ -65,6 +69,9 @@
                <font>
                   <Font size="21.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </VBox>
