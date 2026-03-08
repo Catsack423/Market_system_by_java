@@ -1,1 +1,1 @@
-![HOME](Online marketplace platform.png)
+<img src="Online marketplace platform.png" width="600">
